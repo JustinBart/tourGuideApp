@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Colorado Springs Tour</string>
+    <string name="event_label">Events</string>
+    <string name="historical_site_label">Historical Sites</string>
+    <string name="park_label">Parks</string>
+    <string name="restaurant_label">Restaurants</string>
+</resources>
