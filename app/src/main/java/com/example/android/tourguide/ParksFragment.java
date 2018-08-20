@@ -24,24 +24,27 @@ public class ParksFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.location_list, container, false);
 
         final ArrayList<Location> locations = new ArrayList<>();
-        locations.add(new Location("Rampart Park", "7850 N Union Blvd",
-                "0600 - 1800"));
-        locations.add(new Location("Ford Frick Park", "8025 N Union Blvd",
-                "0600 - 1800"));
-        locations.add(new Location("Erindale Park", "1705 Twin Oaks Dr",
-                "0600 - 1800"));
-        locations.add(new Location("Cttonwood Creek Park", "7040 Rangewood Dr",
-                "0600 - 1800"));
-        locations.add(new Location("John Venezia Community Park", "3555 Briargate Pkwy",
-                "0600 - 1800"));
-        locations.add(new Location("Dublin Park", "2450 Roundtop Dr",
-                "0600 - 1800"));
-        locations.add(new Location("Nancy Lewis Park", "Colorado Springs",
-                "0600 - 1800"));
-        locations.add(new Location("Stetson Park", "4870 Jedediah Smith Rd",
-                "0600 - 1800"));
-        locations.add(new Location("Baseball Game", "123 Pitcher pk.",
-                "0600 - 1800"));
+        locations.add(new Location(getString(R.string.rampart), getString(R.string.rampart_address),
+                getString(R.string.rampart_hours)));
+        locations.add(new Location(getString(R.string.ford_frick),
+                getString(R.string.ford_frick_address),
+                getString(R.string.ford_frick_hours)));
+        locations.add(new Location(getString(R.string.erindale),
+                getString(R.string.erindale_address),
+                getString(R.string.erindale_hours)));
+        locations.add(new Location(getString(R.string.cottonwood),
+                getString(R.string.cottonwood_address),
+                getString(R.string.cottonwood_hours)));
+        locations.add(new Location(getString(R.string.john), getString(R.string.john_address),
+                getString(R.string.john_hours)));
+        locations.add(new Location(getString(R.string.dublin), getString(R.string.dublin_address),
+                getString(R.string.dublin_hours)));
+        locations.add(new Location(getString(R.string.nancy), getString(R.string.nancy_address),
+                getString(R.string.nancy_hours)));
+        locations.add(new Location(getString(R.string.stetson), getString(R.string.stetson_address),
+                getString(R.string.stetson_hours)));
+        locations.add(new Location(getString(R.string.pitcher), getString(R.string.pitch_address),
+                getString(R.string.pitcher_hours)));
 
         LocationAdapter itemsAdapter = new LocationAdapter(getActivity(), locations);
 

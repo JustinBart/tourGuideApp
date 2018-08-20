@@ -26,9 +26,8 @@ public class LocationAdapter extends ArrayAdapter {
     @Override
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         // check if the existing view is being reused, otherwise inflate the view
-        View listItemView = convertView;
-        if(listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
+        if(convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
 
@@ -36,19 +35,19 @@ public class LocationAdapter extends ArrayAdapter {
         Location currentLocation = (Location) getItem(position);
 
         // get the name TextView and set it to the location's name a the given position
-        TextView locationName = listItemView.findViewById(R.id.name);
+        TextView locationName = convertView.findViewById(R.id.name);
         locationName.setText(currentLocation.getName());
 
         // get the address TextView and set it to the location's name a the given position
-        TextView locationAddress = listItemView.findViewById(R.id.address);
+        TextView locationAddress = convertView.findViewById(R.id.address);
         locationAddress.setText(currentLocation.getAddress());
 
         // get the hours TextView and set it to the location's name a the given position
-        TextView locationHours = listItemView.findViewById(R.id.hours);
+        TextView locationHours = convertView.findViewById(R.id.hours);
         locationHours.setText(currentLocation.getHours());
 
         // get the site_img Image View and if an img is set then display it
-        ImageView siteView = listItemView.findViewById(R.id.site_img);
+        ImageView siteView = convertView.findViewById(R.id.site_img);
 
         if (currentLocation.hasImage()) {
             siteView.setImageResource(currentLocation.getImageResourceId());
@@ -56,6 +55,6 @@ public class LocationAdapter extends ArrayAdapter {
         } else {
             siteView.setVisibility(View.GONE);
         }
-        return listItemView;
+        return convertView;
     }
 }

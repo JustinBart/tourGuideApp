@@ -24,24 +24,32 @@ public class RestaurantFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.location_list, container, false);
 
         final ArrayList<Location> locations = new ArrayList<>();
-        locations.add(new Location("Mona Lisa Fondue Restaurant",
-                "733 Manitou Ave", "1700 - 2030", R.drawable.mona_lisa));
-        locations.add(new Location("The Margarita at Pine Creek",
-                "7350 Pine Creek Rd", "1100 - 2030", R.drawable.margarita));
-        locations.add(new Location("Thai Mint Restaurant",
-                "3202 Chambers Way","1100 - 2100", R.drawable.thai_mint));
-        locations.add(new Location("Rock City Cafe",
-                "1812 Dominion Way", "0800 - 1500", R.drawable.rock_city_cafe));
-        locations.add(new Location("Shangrila Restaurant",
-                "8850 N Union Blvd","1100 - 2030", R.drawable.shangrila));
-        locations.add(new Location("Piglatin Cocina",
-                "2825","1100 - 2030", R.drawable.piglatin));
-        locations.add(new Location("Caspian Caafe",
-                "4375 Sinton Rd","1100 - 2030", R.drawable.caspian));
-        locations.add(new Location("Mountain Shadows Restaurant",
-                "2223 W Colorado Ave","1100 - 2030", R.drawable.mountain_shadows));
-        locations.add(new Location("MOD Pizza",
-                "7447 Academy Blvd N","1100 - 2030", R.drawable.mod));
+        locations.add(new Location(getString(R.string.mona_lisa),
+                getString(R.string.mona_lisa_address), getString(R.string.mona_lisa_hours),
+                R.drawable.mona_lisa));
+        locations.add(new Location(getString(R.string.margarita),
+                getString(R.string.margarita_address), getString(R.string.margarity_hours),
+                R.drawable.margarita));
+        locations.add(new Location(getString(R.string.thai_mint),
+                getString(R.string.thai_mint_address), getString(R.string.thai_mint_hours),
+                R.drawable.thai_mint));
+        locations.add(new Location(getString(R.string.rock_city),
+                getString(R.string.rock_city_address), getString(R.string.rock_city_hours),
+                R.drawable.rock_city_cafe));
+        locations.add(new Location(getString(R.string.shangrila),
+                getString(R.string.shangrila_address), getString(R.string.shangrila_hours),
+                R.drawable.shangrila));
+        locations.add(new Location(getString(R.string.piglatin),
+                getString(R.string.piglatin_address), getString(R.string.piglatin_hours),
+                R.drawable.piglatin));
+        locations.add(new Location(getString(R.string.caspian),
+                getString(R.string.caspian_address), getString(R.string.caspian_hours),
+                R.drawable.caspian));
+        locations.add(new Location(getString(R.string.shadows),
+                getString(R.string.shadows_address), getString(R.string.shadows_hours),
+                R.drawable.mountain_shadows));
+        locations.add(new Location(getString(R.string.mod),
+                getString(R.string.mod_address), getString(R.string.mod_hours), R.drawable.mod));
 
         LocationAdapter itemsAdapter = new LocationAdapter(getActivity(), locations);
 

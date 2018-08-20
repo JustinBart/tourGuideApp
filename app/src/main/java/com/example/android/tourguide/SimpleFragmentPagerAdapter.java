@@ -1,5 +1,7 @@
 package com.example.android.tourguide;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,11 +11,15 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    // todo update titles
-    private String tabTitles[] = new String[]{"Events", "Historical Sites", "Parks", "Restaurants"};
+    private String tabTitles[];
 
-    SimpleFragmentPagerAdapter(FragmentManager fm) {
+    SimpleFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
+        Resources resource = context.getResources();
+        tabTitles = new String[]{resource.getString(R.string.events_title),
+                resource.getString(R.string.historical_title),
+                resource.getString(R.string.parks_title),
+                resource.getString(R.string.restaurants_title)};
     }
 
     // todo update framents

@@ -24,26 +24,34 @@ public class EventsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.location_list, container, false);
 
         final ArrayList<Location> locations = new ArrayList<>();
-        locations.add(new Location("Birthday Party", "123 party st",
-                "1100 - 1400"));
-        locations.add(new Location("Reading group", "321 reading rd.",
-                "2000 - 2100"));
-        locations.add(new Location("Togo Party", "1283 Rome st",
-                "0111 - 2120"));
-        locations.add(new Location("Code off", "0101 Bit st",
-                "0101 - 1010"));
-        locations.add(new Location("BBQ", "1 Ribs st",
-                "1100 - 1400"));
-        locations.add(new Location("Music Fest", "55 E. Cord st",
-                "1700 - 1800"));
-        locations.add(new Location("Party", "55551 N. Vist st",
-                "1100 - 1400"));
-        locations.add(new Location("Card Game", "3 Magic st",
-                "1100 - 1400"));
-        locations.add(new Location("Baseball Game", "123 Pitcher pk.",
-                "1100 - 1400"));
-        locations.add(new Location("Wine off", "123 Wine'o st",
-                "1100 - 1400"));
+        locations.add(new Location(getString(R.string.birday_party),
+                getString(R.string.birthday_address),
+                getString(R.string.birday_event_time)));
+        locations.add(new Location(getString(R.string.reading_group),
+                getString(R.string.reading_group_address),
+                getString(R.string.reading_group_event_time)));
+        locations.add(new Location(getString(R.string.togo_party),
+                getString(R.string.togo_party_address),
+                getString(R.string.togo_party_event_time)));
+        locations.add(new Location(getString(R.string.code_off),
+                getString(R.string.code_off_address),
+                getString(R.string.code_off_event_time)));
+        locations.add(new Location(getString(R.string.bbq), getString(R.string.bbq_address),
+                getString(R.string.bbq_event_time)));
+        locations.add(new Location(getString(R.string.music_fest),
+                getString(R.string.music_fest_address),
+                getString(R.string.music_fest_event_time)));
+        locations.add(new Location(getString(R.string.party), getString(R.string.party_address),
+                getString(R.string.party_event_time)));
+        locations.add(new Location(getString(R.string.card_game),
+                getString(R.string.card_game_address),
+                getString(R.string.card_game_event_time)));
+        locations.add(new Location(getString(R.string.baseball_game),
+                getString(R.string.baseball_game_address),
+                getString(R.string.baseball_game_event_time)));
+        locations.add(new Location(getString(R.string.wine_off),
+                getString(R.string.wine_off_address),
+                getString(R.string.wine_off_event_time)));
 
         LocationAdapter itemsAdapter = new LocationAdapter(getActivity(), locations);
 
